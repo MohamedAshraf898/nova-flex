@@ -35,6 +35,8 @@ body.is-loading { overflow: hidden; }
 img { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
 h1, h2, h3, h4, p, figure, ol { margin: 0; padding: 0; }
+/* All paragraph text is lower case (overrides the uppercase/capitalize styles below) */
+p { text-transform: lowercase !important; }
 ol { list-style: none; }
 button, input, select, textarea { font: inherit; color: inherit; }
 ::selection { background: var(--cyan); color: var(--black); }
