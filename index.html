@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nova Flex — Fuel Station Systems</title>
+  <meta name="description" content="Nova Flex installs, upgrades and maintains the mechanical and electrical systems that fuel stations depend on.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Shared logo symbols -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="mark" viewBox="0 0 68.64 32.54">
+        <path d="M68.6334 0.154394H51.4364L43.9266 13.8438C43.7282 14.2062 43.4911 14.5461 43.2175 14.8571C42.0489 16.1825 38.8282 19.206 35.0467 17.3786L43.5245 30.257C43.5245 30.257 47.0972 35.7342 50.4881 29.7211L68.6334 0.154394Z"/>
+        <path d="M0 32.3845H17.197L24.5324 19.0144C24.9386 18.2742 25.4524 17.5966 26.0623 17.0073C27.5463 15.572 30.3639 13.6029 33.5877 15.1613L25.1099 2.28297C25.1099 2.28297 21.5372 -3.19424 18.1463 2.81888L0 32.3845Z"/>
+      </symbol>
+      <symbol id="wordmark" viewBox="73.9 7.78 131.1 20.93">
+        <path d="M73.9116 28.705V9.18124H77.0306L87.0663 20.4767C87.3013 20.7371 87.532 21.0016 87.7583 21.2717C87.983 21.5418 88.2049 21.8161 88.4208 22.0945C88.3621 21.6852 88.3224 21.1979 88.3033 20.6299C88.2842 20.0632 88.2739 19.491 88.2739 18.9146V9.18124H92.0408V28.7037H89.3626L78.9449 16.9626C78.7098 16.7023 78.4791 16.4377 78.2529 16.1676C78.0266 15.8989 77.8063 15.6233 77.5903 15.3448C77.6491 15.7541 77.6887 16.2414 77.7078 16.8095C77.7269 17.3775 77.7372 17.9484 77.7372 18.5248V28.705H73.9116Z"/>
+        <path d="M103.197 28.705C101.585 28.705 100.147 28.3579 98.8772 27.6637C97.609 26.9695 96.6168 26.0448 95.9021 24.8911C95.1873 23.7374 94.83 22.4557 94.83 21.049C94.83 19.6423 95.1873 18.3565 95.9021 17.1929C96.6168 16.0293 97.609 15.1004 98.8772 14.4062C100.145 13.712 101.585 13.3649 103.197 13.3649C104.809 13.3649 106.273 13.712 107.533 14.4062C108.79 15.1004 109.778 16.0293 110.493 17.1929C111.207 18.3565 111.565 19.6423 111.565 21.049C111.565 22.4557 111.207 23.7374 110.493 24.8911C109.778 26.0448 108.79 26.9695 107.533 27.6637C106.273 28.3579 104.829 28.705 103.197 28.705ZM103.197 25.2424C104.063 25.2424 104.818 25.0499 105.462 24.6648C106.106 24.2798 106.605 23.7683 106.958 23.1303C107.309 22.4923 107.487 21.7981 107.487 21.0476C107.487 20.2972 107.311 19.5749 106.958 18.9369C106.605 18.2989 106.108 17.7874 105.462 17.4023C104.817 17.0173 104.063 16.8247 103.197 16.8247C102.332 16.8247 101.576 17.0173 100.932 17.4023C100.287 17.7874 99.7894 18.2989 99.4366 18.9369C99.0837 19.5749 98.9073 20.2789 98.9073 21.0476C98.9073 21.8163 99.0837 22.4937 99.4366 23.1303C99.7879 23.7683 100.287 24.2798 100.932 24.6648C101.576 25.0499 102.332 25.2424 103.197 25.2424Z"/>
+        <path d="M117.947 28.705L111.565 13.3649H116.27L119.329 22.1254C119.603 22.9118 119.819 23.7291 119.976 24.5744C120.133 23.7291 120.349 22.9133 120.624 22.1254L123.682 13.3649H128.299L121.946 28.705H117.947Z"/>
+        <path d="M136.034 28.7051C134.61 28.7051 133.31 28.3616 132.137 27.676C130.963 26.9904 130.03 26.0684 129.338 24.9126C128.645 23.7568 128.299 22.473 128.299 21.0638C128.299 20.0109 128.499 19.0198 128.902 18.0893C129.303 17.1588 129.854 16.3409 130.558 15.6356C131.259 14.9303 132.078 14.3757 133.011 13.9716C133.944 13.5676 134.952 13.3649 136.036 13.3649C137.4 13.3649 138.464 13.6042 139.225 14.0843C139.987 14.5643 140.579 15.1978 141.001 15.9875V13.6746H145.034V28.339H141.091V25.9417C140.671 26.7694 140.073 27.4367 139.301 27.9435C138.528 28.4517 137.439 28.7051 136.036 28.7051H136.034ZM136.697 25.2645C137.6 25.2645 138.376 25.0717 139.029 24.686C139.681 24.3002 140.187 23.7878 140.549 23.1487C140.91 22.5096 141.091 21.8142 141.091 21.0624C141.091 20.3107 140.911 19.5871 140.549 18.948C140.188 18.3089 139.681 17.7923 139.029 17.3967C138.376 17.0025 137.598 16.804 136.697 16.804C135.795 16.804 135.076 16.9969 134.425 17.3826C133.773 17.7683 133.267 18.2807 132.904 18.9199C132.544 19.559 132.362 20.2642 132.362 21.0343C132.362 21.8043 132.542 22.4589 132.904 23.1065C133.265 23.7554 133.771 24.2763 134.425 24.6719C135.077 25.066 135.834 25.2645 136.697 25.2645Z"/>
+        <path d="M153.401 28.705V9.18124H164.558V12.6953H157.201V17.2689H164.421V20.7273H157.201V28.7037H153.401V28.705Z"/>
+        <path d="M167.347 28.7051V7.78669H171.531V28.7051H167.347Z"/>
+        <path d="M181.371 28.7036C179.695 28.7036 178.22 28.3572 176.944 27.6643C175.667 26.9714 174.678 26.0485 173.977 24.897C173.275 23.7455 172.925 22.4663 172.925 21.0623C172.925 19.6583 173.29 18.3694 174.024 17.1996C174.756 16.0298 175.756 15.0971 177.023 14.4042C178.289 13.7114 179.739 13.3649 181.371 13.3649C183.003 13.3649 184.443 13.7114 185.688 14.4042C186.932 15.0971 187.906 16.0298 188.608 17.1996C189.309 18.3708 189.66 19.6583 189.66 21.0623C189.66 21.2685 189.649 21.4831 189.628 21.7089C189.608 21.9333 189.577 22.1676 189.534 22.4116H177.32C177.551 23.2728 178.016 23.9755 178.717 24.5183C179.418 25.0611 180.303 25.3332 181.371 25.3332C182.291 25.3332 183.092 25.1467 183.772 24.7708C184.453 24.3963 184.981 23.9278 185.359 23.3654L188.655 25.5857C188.006 26.503 187.033 27.2534 185.735 27.834C184.437 28.4147 182.982 28.705 181.371 28.705V28.7036ZM181.308 16.6217C180.303 16.6217 179.444 16.8938 178.733 17.4366C178.021 17.9794 177.549 18.692 177.32 19.5714H185.39C185.16 18.7663 184.683 18.0734 183.962 17.4927C183.239 16.9121 182.355 16.6217 181.308 16.6217Z"/>
+        <path d="M188.267 28.705L194.146 21.035L188.568 13.3649H193.422L196.618 18.2323L199.935 13.3649H204.699L199.121 21.0939L205 28.705H200.055L196.648 23.8082L193.12 28.705H188.265H188.267Z"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- Intro loader -->
+  <div class="loader" aria-hidden="true">
+    <svg class="loader__mark" viewBox="0 0 68.64 32.54"><use href="#mark"/></svg>
+    <div class="loader__bar"><span></span></div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <a href="#top" class="brand" aria-label="Nova Flex home">
+      <svg class="brand__mark" viewBox="0 0 68.64 32.54"><use href="#mark"/></svg>
+      <svg class="brand__word" viewBox="0 0 131.1 20.93"><use href="#wordmark"/></svg>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#top" class="nav__link">Home</a>
+      <a href="#services" class="nav__link">Services</a>
+      <a href="#projects" class="nav__link">Projects</a>
+      <a href="#locations" class="nav__link">Locations</a>
+    </nav>
+    <button class="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+  </header>
+
+  <div class="menu" aria-hidden="true">
+    <a href="#top">Home</a>
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#locations">Locations</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <main id="top">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero__media">
+        <div class="hero__scene">
+          <img src="assets/hero.jpg" alt="Industrial fuel facility lit at night" fetchpriority="high">
+          <canvas class="hero__smoke" aria-hidden="true"></canvas>
+        </div>
+        <div class="hero__light" aria-hidden="true"></div>
+      </div>
+      <div class="hero__fade"></div>
+      <div class="hero__content container">
+        <div class="hero__left">
+          <p class="eyebrow" data-hero>Quality first</p>
+          <p class="hero__lede" data-hero>Nova Flex installs, upgrades and maintains the mechanical and electrical systems that fuel stations depend on, from tanks and piping to testing and handover</p>
+        </div>
+        <div class="hero__right">
+          <h1 class="hero__title">
+            <span class="line"><span>Your fuel station systems</span></span>
+            <span class="line"><span>coordinated by one team</span></span>
+          </h1>
+          <div class="hero__ctas">
+            <a href="#contact" class="btn btn--solid magnetic" data-hero><span>Request a quotation</span></a>
+            <a href="#projects" class="btn btn--ghost magnetic" data-hero><span>Explore our projects</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats">
+      <div class="stats__bg"><img src="assets/stats-bg.jpg" alt=""></div>
+      <div class="stats__card container-inner">
+        <div class="stat"><span class="stat__num" data-count="15">15</span><span class="stat__label">Projects in<br>our portfolio</span></div>
+        <div class="stat"><span class="stat__num" data-count="14">14</span><span class="stat__label">Completed<br>projects</span></div>
+        <div class="stat"><span class="stat__num" data-count="4">4</span><span class="stat__label">Saudi<br>regions</span></div>
+        <div class="stat"><span class="stat__num" data-count="11">11</span><span class="stat__label">Contracting<br>clients</span></div>
+      </div>
+    </section>
+
+    <!-- Intro -->
+    <section class="intro">
+      <div class="pattern pattern--flip"></div>
+      <div class="intro__inner container">
+        <div class="intro__logo">
+          <svg class="intro__mark" viewBox="0 0 68.64 32.54"><use href="#mark"/></svg>
+          <svg class="intro__word" viewBox="0 0 131.1 20.93"><use href="#wordmark"/></svg>
+        </div>
+        <h2 class="intro__kicker">Specialists in fuel station systems</h2>
+        <p class="intro__text split-words">Nova Flex installs, upgrades and maintains the mechanical and electrical systems that fuel stations depend on, from tanks and piping to testing and handover</p>
+      </div>
+      <div class="intro__fade"></div>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="services">
+      <div class="services__glow" aria-hidden="true"></div>
+      <div class="container">
+        <h2 class="section-title reveal-up">Services</h2>
+      </div>
+      <div class="svc-wrap container">
+        <div class="svc-rail" aria-hidden="true"><span class="svc-rail__fill"></span><span class="svc-rail__dot"></span></div>
+        <ol class="svc-list">
+        <li class="svc">
+          <span class="svc__num">01</span>
+          <div class="svc__main">
+            <h3 class="svc__title"><i class="svc__dot" aria-hidden="true"></i><span>The systems behind your station</span></h3>
+            <p class="svc__meta"><b>Full package</b><i>·</i>Mechanical<i>·</i>Electrical</p>
+            <p class="svc__desc">Choose the services your project needs, or bring mechanical and electrical works together in one coordinated package</p>
+          </div>
+          <span class="svc__tag">One contractor × one plan</span>
+          <figure class="svc__img"><img src="assets/svc-1.jpg" alt="Control room with monitoring screens" loading="lazy"></figure>
+          <a href="#contact" class="svc__arrow" aria-label="Ask about the systems behind your station"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+        </li>
+        <li class="svc">
+          <span class="svc__num">02</span>
+          <div class="svc__main">
+            <h3 class="svc__title"><i class="svc__dot" aria-hidden="true"></i><span>Fuel tanks and piping</span></h3>
+            <p class="svc__meta"><b>Tanks</b><i>·</i>Fuel &amp; vent piping<i>·</i>Vapour recovery</p>
+            <p class="svc__desc">Tank inspection and installation, fuel and vent piping, vapour-recovery lines and containment chambers, with installation to the approved project drawings</p>
+          </div>
+          <span class="svc__tag">Installation × drawings</span>
+          <figure class="svc__img"><img src="assets/svc-2.jpg" alt="Fuel storage tanks at night" loading="lazy"></figure>
+          <a href="#contact" class="svc__arrow" aria-label="Ask about fuel tanks and piping"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+        </li>
+        <li class="svc">
+          <span class="svc__num">03</span>
+          <div class="svc__main">
+            <h3 class="svc__title"><i class="svc__dot" aria-hidden="true"></i><span>Pumps and dispensers</span></h3>
+            <p class="svc__meta"><b>Submersible pumps</b><i>·</i>Dispensers<i>·</i>Calibration</p>
+            <p class="svc__desc">Installation, connection and calibration of submersible pumps and fuel dispensers, including links to the piping network and control systems</p>
+          </div>
+          <span class="svc__tag">Flow × control</span>
+          <figure class="svc__img"><img src="assets/svc-3.jpg" alt="Fuel dispensers" loading="lazy"></figure>
+          <a href="#contact" class="svc__arrow" aria-label="Ask about pumps and dispensers"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+        </li>
+        <li class="svc">
+          <span class="svc__num">04</span>
+          <div class="svc__main">
+            <h3 class="svc__title"><i class="svc__dot" aria-hidden="true"></i><span>Monitoring and automation</span></h3>
+            <p class="svc__meta"><b>Tank gauging</b><i>·</i>Leak detection<i>·</i>Alarms</p>
+            <p class="svc__desc">Automatic tank gauging, inventory monitoring, leak-detection sensors and alarm integration, with programming, calibration and point-by-point testing</p>
+          </div>
+          <span class="svc__tag">Monitoring × safety</span>
+          <figure class="svc__img"><img src="assets/svc-4.jpg" alt="Engineer checking monitoring dashboards" loading="lazy"></figure>
+          <a href="#contact" class="svc__arrow" aria-label="Ask about monitoring and automation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+        </li>
+        <li class="svc">
+          <span class="svc__num">05</span>
+          <div class="svc__main">
+            <h3 class="svc__title"><i class="svc__dot" aria-hidden="true"></i><span>Electrical systems</span></h3>
+            <p class="svc__meta"><b>Power panels</b><i>·</i>Emergency shutdown<i>·</i>Earthing</p>
+            <p class="svc__desc">Power and control panels for pumps, dispensers and lighting, together with emergency shutdown systems, suitable electrical routes and measured earthing.</p>
+          </div>
+          <span class="svc__tag">Power × protection</span>
+          <figure class="svc__img"><img src="assets/svc-5.jpg" alt="Engineer beside an industrial pump" loading="lazy"></figure>
+          <a href="#contact" class="svc__arrow" aria-label="Ask about electrical systems"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+        </li>
+        <li class="svc">
+          <span class="svc__num">06</span>
+          <div class="svc__main">
+            <h3 class="svc__title"><i class="svc__dot" aria-hidden="true"></i><span>Testing and handover</span></h3>
+            <p class="svc__meta"><b>Pressure tests</b><i>·</i>Commissioning<i>·</i>As-built records</p>
+            <p class="svc__desc">Pressure and tightness testing before backfilling, trial operation, commissioning and a documented handover with as-built drawings and test records</p>
+          </div>
+          <span class="svc__tag">Testing × handover</span>
+          <figure class="svc__img"><img src="assets/svc-6.jpg" alt="Technician wiring a control panel" loading="lazy"></figure>
+          <a href="#contact" class="svc__arrow" aria-label="Ask about testing and handover"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+        </li>
+        <li class="svc">
+          <span class="svc__num">07</span>
+          <div class="svc__main">
+            <h3 class="svc__title"><i class="svc__dot" aria-hidden="true"></i><span>Maintenance and spare parts</span></h3>
+            <p class="svc__meta"><b>Preventive care</b><i>·</i>Fault support<i>·</i>Original parts</p>
+            <p class="svc__desc">Preventive maintenance and fault support for pumps, piping and sensors, with original spare parts and technical installation support.</p>
+          </div>
+          <span class="svc__tag">Support × uptime</span>
+          <figure class="svc__img"><img src="assets/svc-7.jpg" alt="Gloved hand holding wrenches" loading="lazy"></figure>
+          <a href="#contact" class="svc__arrow" aria-label="Ask about maintenance and spare parts"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+        </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects container" id="projects">
+      <h2 class="section-title reveal-up">Projects</h2>
+      <h3 class="projects__sub reveal-up">Experience on site</h3>
+      <p class="projects__desc reveal-up">Explore mechanical and electrical work across branded and independent fuel stations, from piping installations to coordinated systems packages</p>
+
+      <div class="stack">
+        <article class="project">
+          <div class="project__main">
+            <h4 class="project__title">Madinah Road station</h4>
+            <p class="project__meta">Jeddah, Makkah Region <i>|</i> 2025 <i>|</i> Completed</p>
+            <p class="project__desc">A mechanical and electrical package covering tanks, piping, dispensers, power and control panels, sensors and tank gauging, through trial operation and handover.</p>
+          </div>
+          <div class="project__brand">
+            <span>Station brand: Petromin</span>
+            <img src="assets/brand-petromin.png" alt="Petromin logo" loading="lazy">
+          </div>
+        </article>
+        <article class="project">
+          <div class="project__main">
+            <h4 class="project__title">Al Jabr station</h4>
+            <p class="project__meta">Al-Hofuf, Al-Ahsa, Eastern Province <i>|</i> 2025 <i>|</i> Completed</p>
+            <p class="project__desc">Fuel and vent piping, vapour-recovery lines, containment chambers and dispenser connections, followed by pressure testing and inspection before handover.</p>
+          </div>
+          <div class="project__brand">
+            <span>Station brand: Aramco</span>
+            <img src="assets/brand-aramco.jpg" alt="Saudi Aramco logo" loading="lazy">
+          </div>
+        </article>
+        <article class="project">
+          <div class="project__main">
+            <h4 class="project__title">Dammam Stadium station</h4>
+            <p class="project__meta">Dammam, Eastern Province <i>|</i> 2026 <i>|</i> Completed</p>
+            <p class="project__desc">Mechanical and electrical installation coordinated within an active site and a demanding programme, with an approved test file delivered at handover.</p>
+          </div>
+          <div class="project__brand">
+            <span>Station brand: Petromin</span>
+            <img src="assets/brand-petromin.png" alt="Petromin logo" loading="lazy">
+          </div>
+        </article>
+        <article class="project">
+          <div class="project__main">
+            <h4 class="project__title">Mishari stations 1 and 2</h4>
+            <p class="project__meta">Qassim <i>|</i> 2025 <i>|</i> Both completed</p>
+            <p class="project__desc">Mechanical and electrical systems delivered in parallel at two stations, using separate teams and a shared procurement schedule.</p>
+          </div>
+          <div class="project__brand">
+            <span>Station brand: Octane</span>
+            <img src="assets/brand-octane.jpg" alt="High-Octane sign" loading="lazy">
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Why -->
+    <section class="why">
+      <!-- "We got it covered": scroll zooms into the N and opens onto this section -->
+      <div class="door">
+        <div class="door__stage">
+          <div class="door__canvas" aria-hidden="true">
+            <figure class="door__shot"><img src="assets/svc-1.jpg" alt="" loading="lazy"><figcaption>Control room</figcaption></figure>
+            <figure class="door__shot"><img src="assets/svc-2.jpg" alt="" loading="lazy"><figcaption>Fuel tanks</figcaption></figure>
+            <figure class="door__shot"><img src="assets/svc-4.jpg" alt="" loading="lazy"><figcaption>Monitoring</figcaption></figure>
+            <figure class="door__shot"><img src="assets/svc-5.jpg" alt="" loading="lazy"><figcaption>Electrical</figcaption></figure>
+            <figure class="door__shot"><img src="assets/svc-6.jpg" alt="" loading="lazy"><figcaption>Testing</figcaption></figure>
+            <figure class="door__shot"><img src="assets/svc-7.jpg" alt="" loading="lazy"><figcaption>Maintenance</figcaption></figure>
+            <figure class="door__hero"><img src="assets/svc-3.jpg" alt="" loading="lazy"></figure>
+            <p class="door__text">Every system your station runs on.<br><span>One team. One handover.</span></p>
+          </div>
+          <div class="door__zoom">
+            <span class="covered__word covered__word--l"><span>We got it</span></span>
+            <svg class="door__mark" viewBox="0 0 68.64 32.54" aria-hidden="true"><use href="#mark"/></svg>
+            <span class="covered__word covered__word--r"><span>covered.</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="why__head">
+          <h2 class="why__title reveal-up">Why Nova Flex</h2>
+          <p class="why__tag reveal-up">Quality you can verify</p>
+        </div>
+        <div class="why__intro">
+          <p class="why__lead reveal-up">One contractor for the mechanical and electrical works your station depends on.</p>
+          <dl class="why__facts reveal-up">
+            <div><dt>Scope:</dt><dd>Tanks, piping, pumps, power and controls</dd></div>
+            <div><dt>Proof:</dt><dd>Test records and as-built drawings at handover</dd></div>
+          </dl>
+        </div>
+        <div class="why__grid">
+          <article class="why-card why-card--s" tabindex="0">
+            <img class="why-card__img" src="assets/svc-1.jpg" alt="" loading="lazy">
+            <svg class="why-card__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8V3h5M16 3h5v5M21 16v5h-5M8 21H3v-5M12 9v6M9 12h6"/></svg>
+            <span class="why-card__num">01</span>
+            <div class="why-card__body">
+              <h3>Coordinated mechanical and electrical work</h3>
+              <p>Bring connected station systems under one contractor, with planning across the mechanical and electrical scope.</p>
+            </div>
+          </article>
+          <article class="why-card why-card--s" tabindex="0">
+            <img class="why-card__img" src="assets/svc-6.jpg" alt="" loading="lazy">
+            <svg class="why-card__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8V3h5M16 3h5v5M21 16v5h-5M8 21H3v-5M12 9v6M9 12h6"/></svg>
+            <span class="why-card__num">02</span>
+            <div class="why-card__body">
+              <h3>Testing before backfilling</h3>
+              <p>Pressure and tightness checks take place before lines and chambers are covered, with results documented for handover.</p>
+            </div>
+          </article>
+          <article class="why-card why-card--t" tabindex="0">
+            <img class="why-card__img" src="assets/svc-5.jpg" alt="" loading="lazy">
+            <svg class="why-card__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8V3h5M16 3h5v5M21 16v5h-5M8 21H3v-5M12 9v6M9 12h6"/></svg>
+            <span class="why-card__num">03</span>
+            <div class="why-card__body">
+              <h3>Direct execution teams</h3>
+              <p>Our field teams carry out station work, supported by project coordination and planned material supply.</p>
+            </div>
+          </article>
+          <article class="why-card why-card--t" tabindex="0">
+            <img class="why-card__img" src="assets/svc-3.jpg" alt="" loading="lazy">
+            <svg class="why-card__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8V3h5M16 3h5v5M21 16v5h-5M8 21H3v-5M12 9v6M9 12h6"/></svg>
+            <span class="why-card__num">04</span>
+            <div class="why-card__body">
+              <h3>Safety planned into the work</h3>
+              <p>Work permits, exclusion zones and spark-prevention procedures form part of our approach to execution.</p>
+            </div>
+          </article>
+          <article class="why-card why-card--s" tabindex="0">
+            <img class="why-card__img" src="assets/svc-7.jpg" alt="" loading="lazy">
+            <svg class="why-card__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8V3h5M16 3h5v5M21 16v5h-5M8 21H3v-5M12 9v6M9 12h6"/></svg>
+            <span class="why-card__num">05</span>
+            <div class="why-card__body">
+              <h3>Support after delivery</h3>
+              <p>Preventive maintenance, fault support and spare parts help keep the relationship active after commissioning.</p>
+            </div>
+          </article>
+          <article class="why-card why-card--t" tabindex="0">
+            <img class="why-card__img" src="assets/svc-4.jpg" alt="" loading="lazy">
+            <svg class="why-card__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8V3h5M16 3h5v5M21 16v5h-5M8 21H3v-5M12 9v6M9 12h6"/></svg>
+            <span class="why-card__num">06</span>
+            <div class="why-card__body">
+              <h3>Documented handover</h3>
+              <p>Test records and as-built drawings provide a clear record of the installed systems and completed checks.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="regions" id="locations">
+          <h2 class="regions__title">
+            <span class="line"><span>Project experience across</span></span>
+            <span class="line"><span>four Saudi regions</span></span>
+          </h2>
+          <p class="regions__text reveal-up">Based in Riyadh, Nova Flex has project experience across the Eastern Province, Makkah Region, Riyadh Region and Qassim. We also consider projects in other locations, with site mobilisation and accommodation arranged to suit the assignment.</p>
+        </div>
+      </div>
+
+      <div class="map">
+        <div class="map__layer">
+          <img class="map__img" src="assets/map.jpg" alt="Map of Saudi Arabia highlighting project regions" loading="lazy">
+          <div class="map__dots" aria-hidden="true"></div>
+        </div>
+        <aside class="coverage">
+          <h3>Project coverage</h3>
+          <p class="coverage__lead">Projects in the register, by region</p>
+          <table>
+            <thead><tr><th>Region</th><th>Projects</th></tr></thead>
+            <tbody>
+              <tr data-v="7"><td>Eastern Province</td><td><span class="bar"><i></i></span><b>7</b></td></tr>
+              <tr data-v="5"><td>Makkah Region</td><td><span class="bar"><i></i></span><b>5</b></td></tr>
+              <tr data-v="1"><td>Riyadh Region</td><td><span class="bar"><i></i></span><b>1</b></td></tr>
+              <tr data-v="2"><td>Qassim</td><td><span class="bar"><i></i></span><b>2</b></td></tr>
+            </tbody>
+            <tfoot><tr><td>Total</td><td><b>15</b></td></tr></tfoot>
+          </table>
+          <p class="coverage__note">Regional counts include the ongoing project.</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+      <div class="pattern pattern--contact"></div>
+      <div class="contact__panel">
+        <p class="micro">(leave your details)</p>
+        <h2 class="contact__title">Let’s chat.</h2>
+        <form class="form" novalidate>
+          <label class="field">
+            <span class="micro">Name</span>
+            <input type="text" name="name" placeholder="Your full name" autocomplete="name" required>
+            <i class="field__line"></i>
+          </label>
+          <label class="field">
+            <span class="micro">Email</span>
+            <input type="email" name="email" placeholder="Name@gmail.com" autocomplete="email" required>
+            <i class="field__line"></i>
+          </label>
+          <label class="field">
+            <span class="micro">Phone</span>
+            <input type="tel" name="phone" placeholder="+966" autocomplete="tel">
+            <i class="field__line"></i>
+          </label>
+          <label class="field">
+            <span class="micro">Reason</span>
+            <select name="reason">
+              <option value="">Select…</option>
+              <option>New station build</option>
+              <option>Upgrade or retrofit</option>
+              <option>Testing and handover</option>
+              <option>Maintenance and spare parts</option>
+            </select>
+            <i class="field__line"></i>
+          </label>
+          <label class="field field--full">
+            <span class="micro">Message</span>
+            <textarea name="message" rows="2"></textarea>
+            <i class="field__line"></i>
+          </label>
+          <div class="form__foot">
+            <button type="submit" class="btn-send magnetic"><span>Send details</span></button>
+            <p class="micro micro--muted">No spam. A real reply usually the same day.</p>
+          </div>
+          <p class="micro micro--muted form__privacy">Sent details land in our inbox and nowhere else — privacy policy</p>
+          <p class="form__status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+      <h2 class="contact__cta container">Tell us what your station needs.</h2>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="pattern pattern--footer"></div>
+    <div class="footer__top container">
+      <div class="footer__intro">
+        <p class="footer__head">Mechanical and electrical systems for fuel stations, coordinated by one team.</p>
+        <p class="footer__small">From tanks and piping to pumps, dispensers, monitoring, power and control. Based in Riyadh, working across the Eastern Province, Makkah Region, Riyadh Region and Qassim.</p>
+        <a href="#contact" class="pill magnetic"><span>Click here</span></a>
+      </div>
+      <nav class="footer__links" aria-label="Footer">
+        <a href="#top">Home</a>
+        <a href="#contact">Contact</a>
+        <a href="#projects">Projects</a>
+        <a href="#">Social media</a>
+        <a href="#services">Services</a>
+        <span></span>
+        <a href="#locations">Locations</a>
+      </nav>
+    </div>
+    <div class="footer__bar container">
+      <span>© <span class="year">2026</span> Nova Flex</span>
+      <span class="footer__bar-r"><a href="#">Privacy policy</a><span>Riyadh, Saudi Arabia</span></span>
+    </div>
+    <div class="footer__logo" aria-hidden="true">
+      <svg class="footer__mark" viewBox="0 0 68.64 32.54"><use href="#mark"/></svg>
+      <svg class="footer__word" viewBox="0 0 131.1 20.93"><use href="#wordmark"/></svg>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
