@@ -411,7 +411,7 @@
       scrollTrigger: { trigger: card, start: "top 92%" },
     });
     gsap.from([$(".project__brand img", card)], {
-      scale: 0.8, opacity: 0, duration: 1, ease: "back.out(2)",
+      scale: 0.8, opacity: 0, duration: 1, ease: "back.out(2)", transformOrigin: "100% 50%",
       scrollTrigger: { trigger: card, start: "top 75%" },
     });
     if (i === cards.length - 1) return;

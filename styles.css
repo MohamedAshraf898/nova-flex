@@ -386,7 +386,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .project__desc { font-size: clamp(15px, 1.59vw, 22.9px); letter-spacing: -.06em; line-height: 1.21; text-transform: capitalize; max-width: 534px; }
 .project__brand { display: flex; flex-direction: column; align-items: flex-end; gap: 52px; flex-shrink: 0; }
 .project__brand span { font-size: clamp(14px, 1.51vw, 21.7px); letter-spacing: -.06em; text-transform: capitalize; }
-.project__brand img { width: 278px; height: 149px; object-fit: contain; }
+.project__brand img { width: 278px; height: 149px; object-fit: contain; object-position: right center; }
 
 /* ==========================================================
    Covered
@@ -666,6 +666,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
   .svc__arrow { transform: none; }
   .project { flex-direction: column; padding: 36px 24px; min-height: 0; }
   .project__brand { align-items: flex-start; gap: 16px; }
+  .project__brand img { object-position: left center; }
   .project__meta { margin-bottom: 28px; }
   .why__grid { flex-direction: column; align-items: stretch; height: auto; }
   .why-card, .why-card--s, .why-card:hover { flex: none; height: auto; min-height: 210px; padding-top: 56px; }
