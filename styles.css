@@ -455,7 +455,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .why__grid { display: flex; align-items: flex-end; gap: 14px; height: clamp(440px, 40vw, calc(580px * var(--fs))); }
 .why-card {
   position: relative; isolation: isolate; overflow: hidden;
-  flex: 1 1 0; min-width: 0; height: 100%;
+  flex: 1 1 0; min-width: 0; height: 58%;
   display: flex; flex-direction: column; justify-content: flex-end;
   padding: 22px;
   border-radius: 14px; border: 1px solid rgba(255,255,255,.14);
@@ -463,7 +463,6 @@ button, input, select, textarea { font: inherit; color: inherit; }
   outline: none; cursor: default;
   transition: flex-grow .8s var(--ease), height .8s var(--ease), border-color .5s, background .5s;
 }
-.why-card--s { height: 58%; }
 .why-card::before {
   content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
   background: radial-gradient(320px circle at var(--mx, 50%) var(--my, 50%), rgba(80,217,255,.16), transparent 60%);
@@ -680,7 +679,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
   .project__brand img { object-position: left center; }
   .project__meta { margin-bottom: 28px; }
   .why__grid { flex-direction: column; align-items: stretch; height: auto; }
-  .why-card, .why-card--s, .why-card:hover { flex: none; height: auto; min-height: 210px; padding-top: 56px; }
+  .why-card, .why-card:hover { flex: none; height: auto; min-height: 210px; padding-top: 56px; }
   .why-card p { width: auto; max-height: none; opacity: 1; margin-top: 12px; transform: none; }
   .why-card__img { opacity: .35; }
   .map { aspect-ratio: auto; display: flex; flex-direction: column; }
