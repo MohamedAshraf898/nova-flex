@@ -126,6 +126,21 @@
   }
   svcRows[0].classList.add("is-active");
 
+  /* ---------- Footer logo: light follows the cursor ---------- */
+  const fLogo = $(".footer__logo");
+  let moveLight = (x, y) => {
+    fLogo.style.setProperty("--lx", x + "%");
+    fLogo.style.setProperty("--ly", y + "%");
+  };
+  fLogo.addEventListener("pointermove", (e) => {
+    const r = fLogo.getBoundingClientRect();
+    moveLight(((e.clientX - r.left) / r.width) * 100, ((e.clientY - r.top) / r.height) * 100);
+  });
+  fLogo.addEventListener("pointerleave", (e) => {
+    const r = fLogo.getBoundingClientRect();
+    moveLight(e.clientX - r.left < r.width / 2 ? -20 : 120, 50);
+  });
+
   /* ---------- Without GSAP (or reduced motion) stop here ---------- */
   const loader = $(".loader");
   if (!window.gsap || reduced) {
@@ -526,6 +541,14 @@
   gsap.from(".footer__intro > *, .footer__links > *", {
     y: 30, opacity: 0, duration: 1, stagger: 0.05, ease: "expo.out",
     scrollTrigger: { trigger: ".footer", start: "top 85%" },
+  });
+  const lightX = gsap.quickTo(fLogo, "--lx", { duration: 0.6, ease: "power3", unit: "%" });
+  const lightY = gsap.quickTo(fLogo, "--ly", { duration: 0.6, ease: "power3", unit: "%" });
+  moveLight = (x, y) => { lightX(x); lightY(y); };
+  // one light sweep across the logo when it comes into view
+  ScrollTrigger.create({
+    trigger: fLogo, start: "top 85%", once: true,
+    onEnter: () => gsap.fromTo(fLogo, { "--lx": "-20%" }, { "--lx": "120%", duration: 2.2, ease: "power2.inOut", delay: 0.4 }),
   });
   gsap.timeline({ scrollTrigger: { trigger: ".footer__logo", start: "top bottom", end: "bottom bottom", scrub: 1 } })
     .from(".footer__mark", { yPercent: 70, rotate: -8 })

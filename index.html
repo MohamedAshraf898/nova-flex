@@ -9,6 +9,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script>
+    // Above 1440px the whole layout scales up with the screen (capped at 1.9x)
+    (function () {
+      var set = function () {
+        var w = document.documentElement.clientWidth || window.innerWidth;
+        document.documentElement.style.setProperty("--fs", Math.min(1.9, Math.max(1, w / 1440)).toFixed(4));
+      };
+      set();
+      window.addEventListener("resize", set);
+    })();
+  </script>
 </head>
 <body>
 
@@ -458,8 +469,15 @@
       <span class="footer__bar-r"><a href="#">Privacy policy</a><span>Riyadh, Saudi Arabia</span></span>
     </div>
     <div class="footer__logo" aria-hidden="true">
-      <svg class="footer__mark" viewBox="0 0 68.64 32.54"><use href="#mark"/></svg>
-      <svg class="footer__word" viewBox="0 0 131.1 20.93"><use href="#wordmark"/></svg>
+      <div class="footer__logo-row">
+        <svg class="footer__mark" viewBox="0 0 68.64 32.54"><use href="#mark"/></svg>
+        <svg class="footer__word" viewBox="0 0 131.1 20.93"><use href="#wordmark"/></svg>
+      </div>
+      <!-- lit copy, revealed around the cursor -->
+      <div class="footer__logo-row footer__logo-lit">
+        <svg class="footer__mark" viewBox="0 0 68.64 32.54"><use href="#mark"/></svg>
+        <svg class="footer__word" viewBox="0 0 131.1 20.93"><use href="#wordmark"/></svg>
+      </div>
     </div>
   </footer>
 
