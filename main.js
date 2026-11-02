@@ -3,6 +3,8 @@
   const $ = (s, c = document) => c.querySelector(s);
   const $$ = (s, c = document) => [...c.querySelectorAll(s)];
   const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const i18n = window.NF_I18N || { rtl: false, ui: {} };
+  const dirSign = i18n.rtl ? -1 : 1; // flips sideways motion for Arabic (right-to-left)
 
   /* ---------- Map dots (positions from the Figma frame, relative to the map image) ---------- */
   const DOTS = [
@@ -40,7 +42,7 @@
     document.body.style.overflow = open ? "hidden" : "";
     if (window.gsap) {
       gsap.to(menu, { clipPath: open ? "inset(0 0 0% 0)" : "inset(0 0 100% 0)", duration: 0.7, ease: "expo.inOut" });
-      if (open) gsap.fromTo($$("a", menu), { yPercent: 100, opacity: 0 }, { yPercent: 0, opacity: 1, stagger: 0.06, delay: 0.25, duration: 0.6, ease: "power3.out" });
+      if (open) gsap.fromTo($$("a, button", menu), { yPercent: 100, opacity: 0 }, { yPercent: 0, opacity: 1, stagger: 0.06, delay: 0.25, duration: 0.6, ease: "power3.out" });
     } else {
       menu.style.clipPath = open ? "inset(0 0 0% 0)" : "inset(0 0 100% 0)";
     }
@@ -72,11 +74,11 @@
       if (bad) ok = false;
     });
     if (!ok) {
-      status.textContent = "Please add your name and a valid email.";
+      status.textContent = i18n.ui.formError || "Please add your name and a valid email.";
       if (window.gsap) gsap.fromTo(".contact__panel", { x: -8 }, { x: 0, duration: 0.5, ease: "elastic.out(1, 0.3)" });
       return;
     }
-    status.textContent = "Thanks — your details are in. We’ll reply shortly.";
+    status.textContent = i18n.ui.formOk || "Thanks — your details are in. We’ll reply shortly.";
     form.reset();
     select.classList.remove("has-value");
   });
@@ -156,7 +158,7 @@
   /* ---------- Intro loader → hero ---------- */
   gsap.set(".hero__title .line > span", { yPercent: 110 });
   gsap.set("[data-hero]", { y: 24, opacity: 0 });
-  gsap.set([".brand", ".nav__link", ".burger"], { y: -20, opacity: 0 });
+  gsap.set([".brand", ".nav__link", ".header .lang-switch", ".burger"], { y: -20, opacity: 0 });
   gsap.set(".hero__scene", { scale: 1.25 });
 
   const intro = gsap.timeline({ defaults: { ease: "expo.out" } });
@@ -170,7 +172,11 @@
     .to(".hero__scene", { scale: 1.06, duration: 2.2 }, "<0.1")
     .to(".hero__title .line > span", { yPercent: 0, duration: 1.2, stagger: 0.12 }, "<0.35")
     .to("[data-hero]", { y: 0, opacity: 1, duration: 1, stagger: 0.08 }, "<0.2")
-    .to([".brand", ".nav__link", ".burger"], { y: 0, opacity: 1, duration: 0.9, stagger: 0.05 }, "<");
+    .to([".brand", ".nav__link", ".header .lang-switch", ".burger"], { y: 0, opacity: 1, duration: 0.9, stagger: 0.05 }, "<");
+  // Coming back from a language switch: play the intro quickly
+  try {
+    if (sessionStorage.getItem("nf-fast-intro")) { sessionStorage.removeItem("nf-fast-intro"); intro.timeScale(3); }
+  } catch (e) {}
   // Never let the intro hold the page hostage (e.g. throttled background tabs)
   setTimeout(() => { if (intro.progress() < 1) intro.progress(1); }, 4500);
 
@@ -462,8 +468,8 @@
 
   // Entrance as the section scrolls in (props not touched by the pinned timeline)
   gsap.timeline({ scrollTrigger: { trigger: ".door__stage", start: "top 85%", end: "top 15%", scrub: 0.6 } })
-    .fromTo(".covered__word--l", { xPercent: -60, opacity: 0 }, { xPercent: 0, opacity: 1, ease: "power2.out" }, 0)
-    .fromTo(".covered__word--r", { xPercent: 60, opacity: 0 }, { xPercent: 0, opacity: 1, ease: "power2.out" }, 0)
+    .fromTo(".covered__word--l", { xPercent: -60 * dirSign, opacity: 0 }, { xPercent: 0, opacity: 1, ease: "power2.out" }, 0)
+    .fromTo(".covered__word--r", { xPercent: 60 * dirSign, opacity: 0 }, { xPercent: 0, opacity: 1, ease: "power2.out" }, 0)
     .fromTo(doorMark, { rotate: -25, opacity: 0 }, { rotate: 0, opacity: 1, ease: "power2.out" }, 0);
 
   // Pinned: zoom through the N, open the scene, fan the shots out
@@ -475,8 +481,8 @@
       pin: true, scrub: 0.6, anticipatePin: 1, invalidateOnRefresh: true,
     },
   })
-    .fromTo(".covered__word--l", { x: 0 }, { x: () => -window.innerWidth * 0.6, duration: 0.3, ease: "power2.in" }, 0.04)
-    .fromTo(".covered__word--r", { x: 0 }, { x: () => window.innerWidth * 0.6, duration: 0.3, ease: "power2.in" }, 0.04)
+    .fromTo(".covered__word--l", { x: 0 }, { x: () => -window.innerWidth * 0.6 * dirSign, duration: 0.3, ease: "power2.in" }, 0.04)
+    .fromTo(".covered__word--r", { x: 0 }, { x: () => window.innerWidth * 0.6 * dirSign, duration: 0.3, ease: "power2.in" }, 0.04)
     .fromTo(".covered__word > span", { opacity: 1 }, { opacity: 0, duration: 0.24, ...ir }, 0.08)
     .fromTo(doorMark, { x: 0, y: 0, scale: 1 }, { x: () => door.dx, y: () => door.dy, scale: () => door.s, duration: 0.34, ease: "power3.in" }, 0.04)
     .fromTo(".door__canvas", { opacity: 0 }, { opacity: 1, duration: 0.03, ...ir }, 0.35)
